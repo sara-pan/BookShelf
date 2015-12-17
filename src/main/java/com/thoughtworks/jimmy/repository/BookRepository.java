@@ -34,4 +34,24 @@ public class BookRepository {
         BOOKS_MAP.remove(isbn);
     }
 
+/*    static String book2Json(Map<String, Object> map) {
+        if (map.isEmpty())
+            return "{}";
+        StringBuilder sb = new StringBuilder(map.size() << 4);
+        sb.append('{');
+        Set<String> keys = map.keySet();
+        for (String key : keys) {
+            Object value = map.get(key);
+            sb.append('\"');
+            sb.append(key);
+            sb.append('\"');
+            sb.append(':');
+            sb.append(toJson(value));
+            sb.append(',');
+        }
+        // 将最后的 ',' 变为 '}':
+        sb.setCharAt(sb.length()-1, '}');
+        return sb.toString();
+    }*/
+
 }
